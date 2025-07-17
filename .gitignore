@@ -1,0 +1,16 @@
+# Build artifacts
+build/
+*.o
+*.a
+*.exe
+privacy-vcs
+tests
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Misc
+*.log
+*.DS_Store
