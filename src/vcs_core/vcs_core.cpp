@@ -8,7 +8,14 @@ namespace fs = std::filesystem;
 
 namespace vcs_core {
 
-VCS::VCS(const std::string& repo_path) : repo_path_(repo_path), pvcs_dir_(repo_path + "/.pvcs"), diff_trie_() {}
+VCS::VCS(const std::string& repo_path) 
+    : repo_path_(repo_path), 
+      pvcs_dir_(repo_path + "/.pvcs"), 
+      diff_trie_(), 
+      commit_graph_(), 
+      staged_files_(), 
+      current_branch_("main"), 
+      head_commit_() {}
 
 VCS::~VCS() = default;
 
